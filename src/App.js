@@ -8,8 +8,29 @@ import Player from "./pages/Player";
 import Myinfo from "./pages/myinfo";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-import { RecoilRoot } from "recoil";
+import useModal from "./useModal";
+import { Button } from "@mui/material";
+
 const App = () => {
+    const { showModal } = useModal();
+    const handleClickAlertModal = () => {
+        showModal({
+            modalType: "AlertModal",
+            modalProps: {
+                message: "성공...",
+            },
+        });
+    };
+    const handleClickConfirmModal = () => {
+        showModal({
+            modalType: "ConfirmModal",
+            modalProps: {
+                message: "확인용 모달",
+                confirmText: "yes",
+                cancelText: "no",
+            },
+        });
+    };
     // const [email, setEmail] = useState("");
     // const [password, setPassword] = useState("");
     // const [newAccount, setNewAccount] = useState(true);
@@ -59,21 +80,26 @@ const App = () => {
     return (
         <>
             <Header></Header>
-            <RecoilRoot>
-                <React.Suspense
-                    fallback={
-                        <Box sx={{ display: "flex" }}>
-                            <CircularProgress />
-                        </Box>
-                    }
-                >
-                    <Routes>
-                        <Route path="/" element={<Home></Home>}></Route>
-                        <Route path="/player" element={<Player></Player>}></Route>
-                        <Route path="/myinfo" element={<Myinfo></Myinfo>}></Route>
-                    </Routes>
-                </React.Suspense>
-            </RecoilRoot>
+            <Button variant="contained" onClick={handleClickAlertModal} sx={{ mx: 2 }}>
+                알림창모달
+            </Button>
+            <Button variant="contained" onClick={handleClickConfirmModal} sx={{ mx: 2 }}>
+                확인모달
+            </Button>
+
+            <React.Suspense
+                fallback={
+                    <Box sx={{ display: "flex" }}>
+                        <CircularProgress />
+                    </Box>
+                }
+            >
+                <Routes>
+                    <Route path="/" element={<Home></Home>}></Route>
+                    <Route path="/player" element={<Player></Player>}></Route>
+                    <Route path="/myinfo" element={<Myinfo></Myinfo>}></Route>
+                </Routes>
+            </React.Suspense>
         </>
     );
 };
