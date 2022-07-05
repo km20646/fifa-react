@@ -1,6 +1,9 @@
 import axios from "axios";
-import { atom, selector } from "recoil";
-const key = "";
+import { atom, selector, useRecoilValue } from "recoil";
+const keyState = atom({
+    key: "keyState",
+    default: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiMTkxMzA4NTA3NyIsImF1dGhfaWQiOiIyIiwidG9rZW5fdHlwZSI6IkFjY2Vzc1Rva2VuIiwic2VydmljZV9pZCI6IjQzMDAxMTQ4MSIsIlgtQXBwLVJhdGUtTGltaXQiOiI1MDA6MTAiLCJuYmYiOjE2NTY3NTg2MjMsImV4cCI6MTY3MjMxMDYyMywiaWF0IjoxNjU2NzU4NjIzfQ.hBj8GHO-DKSx1t8GypFhKiZvb7DrMrrhUXygy4irFso",
+});
 const data = [
     {
         id: 101000001,
@@ -718,6 +721,7 @@ const playerState = atom({
 const playerSelector = selector({
     key: "playerSelector",
     get: async ({ get }) => {
+        const key = get(keyState);
         const userInfoUrl = "https://api.nexon.co.kr/fifaonline4/v1.0/users?nickname=페어메르테사커";
         // const response = await axios.get("https://fo4.dn.nexoncdn.co.kr/live/externalAssets/common/playersAction/p101000246.png", {
         const { data } = await axios.get(userInfoUrl, {
@@ -726,7 +730,7 @@ const playerSelector = selector({
             },
         });
         console.log(data);
-        return data.accessId;
+        return data.nickname;
     },
 });
-export { playerState, playerSelector };
+export { keyState, playerState, playerSelector };

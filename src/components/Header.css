@@ -1,4 +1,4 @@
-.header {
+/* .header {
     background: #000;
     color: #fff;
     padding: 1rem 1rem;
@@ -13,4 +13,1059 @@
 
 .list:hover {
     color: red;
+} */
+
+@charset "utf-8";
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 100;
+    src: url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2") format("woff2"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff") format("woff"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 300;
+    src: url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2") format("woff2"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff") format("woff"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 400;
+    src: url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format("woff2"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format("woff"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    src: url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2") format("woff2"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff") format("woff"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    src: url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2") format("woff2"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff") format("woff"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 900;
+    src: url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2") format("woff2"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff") format("woff"), url("//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf") format("opentype");
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+textarea,
+input,
+select,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+input,
+select,
+textarea,
+button {
+    font-family: "Noto Sans KR", Dotum, "돋움", Helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #404040;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+ol,
+ul,
+dl,
+menu {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+fieldset,
+img {
+    border: 0 none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+select,
+textarea,
+button {
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"] {
+    border-radius: 0;
+    -webkit-appearance: button;
+}
+
+input[type="image"],
+input[type="text"],
+input[type="submit"],
+input[type="password"],
+input[type="search"] {
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+input:checked[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    background-color: transparent;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+a {
+    display: inline-block;
+    color: #404040;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+b,
+strong,
+span {
+    display: inline-block;
+    font-family: "Noto Sans KR", Dotum, "돋움", Helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #404040;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+audio {
+    display: none;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.clearfix {
+    display: block;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    visibility: hidden;
+    display: block;
+}
+
+.hidden {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    overflow: hidden;
+    display: block;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.opacity10 {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.opacity20 {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.opacity30 {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.opacity40 {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.opacity50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.opacity60 {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.opacity70 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.opacity80 {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.opacity90 {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#root {
+    padding-top: 115px;
+}
+
+#gnb {
+    z-index: 516;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: 1280px;
+    height: 50px;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 0;
+}
+
+#gnb a {
+    display: inline-block;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#gnb .pass {
+    position: fixed;
+    ;
+    top: 196px;
+    left: 0;
+    width: 160px;
+    height: 166px;
+    background: url(https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/pass.png) 0 -189px no-repeat;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+#gnb .pass.active {
+    background-position: 0 0;
+}
+
+#gnb .pass a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    ;
+}
+
+#gnb button {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+#header {
+    z-index: 516;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: 1280px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+}
+
+#header .btn_logo {
+    z-index: 4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #dcdfe1;
+    height: 50px;
+    margin: 0;
+}
+
+#header .btn_logo a {
+    width: 52px;
+    height: 50px;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/btn_logo.png") center center no-repeat;
+}
+
+#header .btn_logo2 {
+    z-index: 4;
+    position: absolute;
+    left: 53px;
+    top: 0;
+    height: 50px;
+}
+
+#header .btn_logo2 a {
+    width: 190px;
+    height: 50px;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/logo.png") center center no-repeat;
+}
+
+#header .btn_event {
+    z-index: 4;
+    position: absolute;
+    left: 53px;
+    top: 0;
+}
+
+#header .btn_event a {
+    width: 150px;
+    height: 50px;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/logo.png") left top no-repeat;
+}
+
+#header .event_join {
+    z-index: 4;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    font-size: 0;
+    line-height: 0;
+    -ms-transform: translateX(-50%) translateY(0%);
+    transform: translateX(-50%) translateY(0%);
+}
+
+#header .event_join>p {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 48px;
+    color: #000000;
+}
+
+#header .event_join>p strong {
+    color: #ff4800;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 48px;
+}
+
+#header .event_join>p a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    background-color: #ff892c;
+    padding: 0 13px;
+    border-radius: 20px;
+    height: 30px;
+    vertical-align: top;
+    margin-top: 9px;
+    margin-left: 10px;
+    ;
+}
+
+#header .event_join>a {
+    position: relative;
+    vertical-align: top;
+}
+
+#header .event_join>a:nth-child(1) {
+    margin-right: 32px;
+}
+
+#header .event_join>a:nth-child(1):after {
+    content: "";
+    position: absolute;
+    right: -16px;
+    top: 14px;
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: #dcdcdc;
+}
+
+#header .event_join>a:nth-child(2) {
+    margin-right: 12px;
+}
+
+#header .event_join>a:nth-child(3) {
+    margin-right: 22px;
+}
+
+#header .event_join>a strong {
+    margin-right: 4px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 48px;
+    color: #000000;
+    vertical-align: top;
+}
+
+#header .event_join>a.btn_nr {
+    color: #ff4800;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 2px solid #ff4800;
+    margin-left: 5px;
+    ;
+    height: 32px;
+    vertical-align: top;
+    width: auto;
+    padding: 0 12px;
+    height: 32px;
+    margin-top: 8px;
+    line-height: 28px;
+    text-align: center;
+    vertical-align: top;
+    background-color: #fff;
+    ;
+}
+
+#header .event_join>a span {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 48px;
+    color: #ff4800;
+    vertical-align: top;
+}
+
+#header .event_join>a span:last-child {
+    color: #000;
+}
+
+#header .event_join>a:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ff4800;
+}
+
+#header .event_join>a.btn_nr:hover:before {
+    display: none;
+}
+
+#header .event_join .btn_event_check {
+    margin-left: 6px;
+    ;
+    width: auto;
+    padding: 0 12px;
+    height: 32px;
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    vertical-align: top;
+    background-color: #ff4800;
+}
+
+#header .event_join>a.btn_event_check:after,
+#header .event_join>a.btn_event_link:after {
+    display: none;
+}
+
+#header .menu {
+    z-index: 4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 50px;
+}
+
+#header .menu .premium {
+    z-index: 6;
+    position: absolute;
+    left: -98px;
+    top: 0;
+    overflow: hidden;
+    width: 74px;
+    height: 50px;
+    text-indent: -9999px;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/bg_premium.png") 0 0 no-repeat;
+}
+
+#header .menu .premium.active {
+    background-position: 0 -50px;
+}
+
+#header .menu .btn_login {
+    z-index: 6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 120px;
+    height: 50px;
+    text-indent: -9999px;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/btn_login.png") right top no-repeat;
+    border-left: 1px solid #dcdfe1
+}
+
+#header .menu .btn_logout {
+    z-index: 6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 120px;
+    height: 50px;
+    text-indent: -9999px;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/btn_logout.png") right top no-repeat;
+    border-left: 1px solid #dcdfe1
+}
+
+#header .menu .btn_gamestart {
+    z-index: 4;
+    position: absolute;
+    right: 50px;
+    top: 0;
+    width: 130px;
+    height: 50px;
+    text-indent: -9999px;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/btn_gamestart.png") left top no-repeat;
+}
+
+#header .menu .btn_control {
+    z-index: 6;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+}
+
+#header .menu .btn_control .inner {
+    height: auto !important;
+    padding: 18px 0;
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    transition-duration: 0.4s;
+}
+
+#header .menu .btn_control .inner span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: 0 auto;
+    text-indent: -9999px;
+    background-color: #ffffff;
+}
+
+#header .menu .btn_control .inner:before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: 0 auto 4px auto;
+    background-color: #ffffff;
+}
+
+#header .menu .btn_control .inner:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: 4px auto 0 auto;
+    background-color: #ffffff;
+}
+
+#header .menu .btn_control.on .inner {
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#aside {
+    z-index: 514;
+    position: absolute;
+    right: -200px;
+    top: 0;
+    opacity: 0;
+    width: 200px;
+    min-height: 258px;
+    padding-top: 50px;
+    box-sizing: border-box;
+    transition-duration: 0.4s;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+    background-color: #c2c2c2;
+}
+
+#aside.on {
+    right: 0;
+    opacity: 1;
+}
+
+#aside .button_box {
+    overflow: hidden;
+    position: relative;
+    min-height: 64px;
+}
+
+#aside .button_box a {
+    float: left;
+    width: 100px;
+    height: 64px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #8c8c96;
+    line-height: 64px;
+    text-align: center;
+}
+
+#aside .button_box .btn_home:before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 64px;
+    margin-right: 8px;
+    vertical-align: top;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/bt_home.png") left top no-repeat;
+}
+
+#aside .button_box .btn_share:before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 64px;
+    margin-right: 8px;
+    vertical-align: top;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/bt_share.png") left top no-repeat;
+}
+
+#aside .button_box a:hover {
+    color: #3e3e54;
+    background-color: #e8e8e8;
+}
+
+#aside .button_box a:hover:before {
+    background-position: 0 -64px;
+}
+
+#aside .button_box:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 22px;
+    width: 2px;
+    height: 20px;
+    margin: 0 0 0 -1px;
+    background-color: #a8aaae;
+}
+
+#aside .scroll_box {
+    overflow: hidden;
+    min-height: 530px;
+}
+
+#aside .scroll_box ul {
+    padding-bottom: 32px;
+}
+
+#aside .scroll_box ul li {
+    line-height: 0;
+}
+
+#aside .scroll_box ul li a {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    border-bottom: 1px solid #acacac;
+    background-color: #c2c2c2;
+    line-height: 0;
+}
+
+#aside .scroll_box ul li a .thumb {
+    opacity: 0.6;
+    width: 180px;
+    height: 72px;
+    padding: 16px 10px 10px 10px;
+}
+
+#aside .scroll_box ul li a p {
+    opacity: 0.6;
+    overflow: hidden;
+    padding-bottom: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    width: 180px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 14px;
+    color: #000000;
+    text-align: center;
+}
+
+#aside .scroll_box ul li a:hover {
+    background-color: #e8e8e8;
+}
+
+#aside .scroll_box ul li a:hover .thumb {
+    opacity: 1;
+}
+
+#aside .scroll_box ul li a:hover p {
+    opacity: 1;
+}
+
+#aside .scroll_box ul li.on a {
+    background-color: #e8e8e8;
+}
+
+#aside .scroll_box ul li.on a .thumb {
+    opacity: 1;
+}
+
+#aside .scroll_box ul li.on a p {
+    opacity: 1;
+}
+
+#aside .scroll_bar {
+    z-index: 2;
+    position: absolute;
+    right: 2px;
+    top: 88px;
+    opacity: 1;
+    width: 10px;
+    min-height: 258px;
+}
+
+#aside .scroll_bar .handle {
+    position: relative;
+    opacity: 0.4;
+    width: 4px;
+    margin-left: 6px;
+    padding: 16px 0 16px 0;
+    box-sizing: border-box;
+}
+
+#aside .scroll_bar .handle span {
+    display: block;
+    height: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+#share {
+    z-index: 508;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.8);
+}
+
+#share .title {
+    position: relative;
+    padding: 16px;
+    background-color: #ffffff;
+}
+
+#share .title h4 {
+    padding-left: 35px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #000000;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/ico_fo4.png") left top no-repeat;
+}
+
+#share .title .btn_close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    text-indent: -9999px;
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/bt_close.png") left top no-repeat;
+}
+
+#share .inner {
+    padding: 64px 128px;
+    background-color: #e6e6e6;
+}
+
+#share .inner button {
+    width: 100px;
+    margin: 0 16px;
+    padding-top: 116px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #565656;
+}
+
+#share .inner .btn_kakaotalk {
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/bt_kakaotalk.png") left top no-repeat;
+}
+
+#share .inner .btn_facebook {
+    background: url("https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/bt_facebook.png") left top no-repeat;
+}
+
+#dimmed {
+    z-index: 504;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#fixedBar {
+    z-index: 56;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    min-width: 1280px;
+    height: 64px;
+    text-align: center;
+    background-color: #17195d;
+    border-bottom: 1px solid #0c0c13;
+}
+
+#fixedBar ul {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 18px;
+    box-sizing: border-box;
+    ;
+    ;
+}
+
+#fixedBar ul li {
+    line-height: 64px;
+    flex: 1 1 158px;
+    position: relative;
+    padding-top: 4px;
+    height: 60px;
+}
+
+#fixedBar ul li:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -2px;
+    height: 36px;
+    background-color: #383ba4;
+    width: 2px;
+}
+
+#fixedBar ul li:last-child:after {
+    display: none;
+}
+
+#fixedBar ul li a {
+    display: block;
+    color: #fff;
+    line-height: 58px;
+    text-align: center;
+    font-size: 16px;
+    ;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    ;
+    z-index: 10;
+}
+
+/* #fixedBar ul li a.alert{position: relative;} */
+#fixedBar ul li a.alert:hover:after {
+    content: "";
+    width: 114px;
+    height: 50px;
+    background: url(https://ssl.nexon.com/s2/game/fo4/event/2022/220623_summer33_sd8y734hy/gnb/alert.png);
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#fixedBar ul li.active {
+    z-index: 10;
+}
+
+#fixedBar ul li.active a {
+    background-color: #55a3eb;
+    color: #03042d;
+    padding: 0 2px;
+    margin-left: -2px;
+    ;
 }
